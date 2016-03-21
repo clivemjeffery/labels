@@ -1,3 +1,9 @@
+## labels ignores
+*.txt
+*.pdf
+*.xlsx
+
+## Generic Ruby ignores from github template below
 *.gem
 *.rbc
 /.config
