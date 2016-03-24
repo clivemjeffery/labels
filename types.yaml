@@ -1,0 +1,102 @@
+#
+# prawns' basic unit is PostScript-Point
+# 72 points per inch
+#
+# YourPrice : Parcel labels, 99.1 x 67.7 mm, 8 per sheet
+YourPrice08:
+    paper_size: A4
+    top_margin: 42.52
+    bottom_margin: 42.52
+    left_margin: 9.9
+    right_margin: 9.9
+    columns: 2
+    rows: 4
+    column_gutter: 8.504
+    row_gutter: 0
+# YourPrice : Mailing labels, 63.5 x 38.1 mm, 21 per sheet
+YourPrice21:
+    paper_size: A4
+    top_margin: 42.52
+    bottom_margin: 42.52
+    left_margin: 21.26
+    right_margin: 21.26
+    columns: 3
+    rows: 7
+    column_gutter: 8.504
+    row_gutter: 0
+# YourPrice : Mailing labels, 99.1 x 38.1 mm, 14 per sheet
+YourPrice14:
+    paper_size: A4
+    top_margin: 49.0
+    bottom_margin: 42.52
+    left_margin: 21.26
+    right_margin: 21.26
+    columns: 2
+    rows: 7
+    column_gutter: 8.504
+    row_gutter: 0
+# Avery 7160 family: Mailing labels, 63.5 x 38.1 mm, 21 per sheet
+Avery7160:
+    paper_size: A4
+    top_margin: 43.9
+    bottom_margin: 0
+    left_margin: 19.843
+    right_margin: 19.843
+    columns: 3
+    rows: 7
+    column_gutter: 8.504
+    row_gutter: 0
+# Avery 5160 family
+Avery5160:
+    paper_size: LETTER
+    top_margin: 36
+    bottom_margin: 36
+    left_margin: 15.822
+    right_margin: 15.822
+    columns: 3
+    rows: 10
+    column_gutter: 15
+    row_gutter: 0
+# Avery5163/5963
+Avery5163:
+    paper_size: LETTER
+    top_margin: 38
+    bottom_margin: 38
+    left_margin: 16
+    right_margin: 16
+    columns: 2
+    rows: 5
+    column_gutter: 18
+    row_gutter: 0    
+# Standard #10 envelope
+Envelope10:
+    paper_size: [297, 595.28]
+    vertical_text: true
+    columns: 1
+    rows: 1
+    right_margin: 180
+    left_margin: 36
+    top_margin: 108
+    bottom_margin: 208
+# Avery 6572
+Avery6572:
+    paper_size: LETTER
+    top_margin: 36
+    bottom_margin: 36
+    left_margin: 9
+    right_margin: 9
+    columns: 3
+    rows: 5
+    column_gutter: 9
+    row_gutter: 0
+# Avery 6871
+Avery6871:
+    paper_size: LETTER
+    top_margin: 80
+    bottom_margin: 80
+    left_margin: 26.9
+    right_margin: 26.9
+    columns: 3
+    rows: 6
+    column_gutter: 22.6
+    row_gutter: 18.4
