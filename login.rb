@@ -25,6 +25,8 @@ f.each_line { |line|
     logins.push(login)
 }
 
+# load and select custom label types
+Prawn::Labels.types = './types.yaml'
 label_type = 'YourPrice14'
 url1 = "https://toothed-rooster.herokuapp.com"
 url2 = "www.purplemash.co.uk/sch/norton-yo17"
