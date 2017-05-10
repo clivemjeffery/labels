@@ -21,16 +21,17 @@ f.each_line { |line|
 	login.shared_folders = fields[4]
 	login.class_group = fields[5]
 	login.upn = fields[6]
-    logins.push(login) # push twice for two labels
+    logins.push(login)
+	# push twice for two labels
     logins.push(login)
 }
 
-# load and select custom label types
+# load and select label type
 Prawn::Labels.types = './types.yaml'
-label_type = 'YourPrice14'
+label_type = 'YourPrice21'
 url1 = "https://toothed-rooster.herokuapp.com"
 url2 = "www.purplemash.co.uk/sch/norton-yo17"
-url3 ="www.activelearnprimary.co.uk (school code 'jhjx')"
+url3 ="www.activelearnprimary.co.uk (code 'jhjx')"
 
 Prawn::Labels.generate("#{fn}_#{__FILE__.split('.')[0]}.pdf", logins, type: label_type) do |pdf, login|
     if login.name.nil? || login.name == ''
@@ -39,15 +40,21 @@ Prawn::Labels.generate("#{fn}_#{__FILE__.split('.')[0]}.pdf", logins, type: labe
     else
         pdf.stroke_color "eeeeee"
         pdf.stroke_bounds
-
-        pdf.image "./pm-logo.png", at: [125, 65], width: 120 # first so other images sit on top
-        pdf.image "./RoosterNew48.png", at: [220, 100], width: 40
-        pdf.image "./bug.png", at: [220, 50], width: 40
+		
+        pdf.image "./pm-logo.png", at: [100, 90], width: 70 # first so other images sit on top
+        pdf.image "./RoosterNew48.png", at: [110, 67], width: 30
+        pdf.image "./bug.png", at: [145, 75], width: 30
         
-        pdf.move_down 5
         pdf.indent(8) do
-            pdf.text "<b>#{login.name}</b> (#{login.class_group})", size: 16, overflow: :shrink_to_fit, inline_format: true, color: "9200B5"
-            pdf.move_down 2
+            pdf.text_box "<color rgb='9200B5'><b>#{login.name}</b></color>", 
+				at: [0, pdf.cursor - 4],
+				size: 16,
+				height: 20,
+				overflow: :shrink_to_fit,
+				inline_format: true
+			pdf.move_down 22 # nestle close under pupil name
+			pdf.text "#{login.class_group}", size: 8
+            pdf.move_down 3
             pdf.text "<b>Username:</b> <font name='Courier'>#{login.login}</font>", size: 10, inline_format: true
             pdf.text "<b>Password :</b> <font name='Courier'>#{login.password}</font>", size: 10, inline_format: true
             pdf.move_down 5
