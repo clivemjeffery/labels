@@ -23,7 +23,7 @@ f.each_line { |line|
 	login.upn = fields[6]
     logins.push(login)
 	# push twice for two labels
-    logins.push(login)
+    #logins.push(login)
 }
 
 # load and select label type
@@ -40,13 +40,13 @@ Prawn::Labels.generate("#{fn}_#{__FILE__.split('.')[0]}.pdf", logins, type: labe
     else
         pdf.stroke_color "eeeeee"
         pdf.stroke_bounds
-		
+
         pdf.image "./pm-logo.png", at: [100, 90], width: 70 # first so other images sit on top
         pdf.image "./RoosterNew48.png", at: [110, 67], width: 30
         pdf.image "./bug.png", at: [145, 75], width: 30
-        
+
         pdf.indent(8) do
-            pdf.text_box "<color rgb='9200B5'><b>#{login.name}</b></color>", 
+            pdf.text_box "<color rgb='9200B5'><b>#{login.name}</b></color>",
 				at: [0, pdf.cursor - 4],
 				size: 16,
 				height: 20,
