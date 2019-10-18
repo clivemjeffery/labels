@@ -2,6 +2,7 @@
 *.txt
 *.pdf
 *.xlsx
+Thumbs.db
 
 ## Generic Ruby ignores from github template below
 *.gem
