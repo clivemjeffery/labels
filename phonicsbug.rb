@@ -56,12 +56,12 @@ Prawn::Labels.generate("#{fn}_#{__FILE__.split('.')[0]}.pdf", logins, type: labe
 			pdf.text "#{login.class_group}", size: 8
             pdf.move_down 3
             pdf.text "<b>Username:</b> <font name='Courier'>#{login.login}</font>", size: 10, inline_format: true
-            pdf.text "<b>Password :</b> <font name='Courier'>#{login.password}</font>", size: 10, inline_format: true
+            pdf.text "<b>Password :</b> <font name='Courier'>jhjx#{login.password}</font>", size: 10, inline_format: true
             pdf.move_down 5
             pdf.font "Helvetica"
             pdf.text '<i>Log in to Bug Club at:</i>', size: 9, inline_format: true
             pdf.text url3, size: 9
-            pdf.text 'The school code is: <b>jhjx</b>', size: 9, inline_format: true
+            pdf.text 'The school code is also <b>jhjx</b>', size: 9, inline_format: true
         end
     end
 end
