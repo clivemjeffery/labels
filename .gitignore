@@ -43,5 +43,5 @@ build/
 .rvmrc
 *.db
 
-# For macOS
+# OS Caches
 .DS_Store
