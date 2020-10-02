@@ -1,0 +1,21 @@
+First name REQUIRED,Last name REQUIRED,Username (best not to use first names only because usernames must be unique) REQUIRED,Password (best not to give everyone the same one) REQUIRED,Maths Band REQUIRED,Pastoral Band OPTIONAL,Year Group (eg Year 2) OPTIONAL but RECOMMENDED,Your unique ID for this user OPTIONAL,Gender (m/f) OPTIONAL,Date of Birth (must be in dd/mm/yyyy format) OPTIONAL,Rock Speed,Rock Status,Rock Name,Our ID for this user,Last seen
+Lucas,Dawson,lucasd,bravebread76,Y5 Dales,,Year 5,C815240814085,m,23/07/2011,5,New Artist,So Van,7667533,28/09/2020 07:58
+Cameron,Dukes,camd,getrobin19,Y5 Dales,,Year 5,X815240814014,m,02/10/2010,none,Rock Star,Rippy Cronin,7667478,01/10/2020 17:09
+Alexia,Ellis,alexiae,tinyspace18,Y5 Dales,,Year 5,F815240814087,f,10/02/2011,5.85,New Artist,Rockin' Sardo,7667506,28/09/2020 16:22
+Alfie,Gibson,alfieg,goodcart13,Y5 Dales,,Year 5,V815240814088,m,09/08/2011,none,New Artist,Rob Romero,7667476,28/09/2020 08:27
+Billy,Gilson,billyg,graylead47,Y5 Dales,,Year 5,J815240814089,m,14/01/2011,3.9,Headliner,Voodoo Grimes,7667522,01/10/2020 20:35
+Charlie,Jackson,charliej,tinysheep37,Y5 Dales,,Year 5,R815240814057,m,22/07/2011,4.29,New Artist,Little Henderson,7667536,28/09/2020 21:00
+Larysa,Johnson,larysaj,rosejoke85,Y5 Dales,,Year 5,N815240814026,f,15/09/2010,none,New Artist,,7667487,
+Natasza,Machudera,nataszam,coolline93,Y5 Dales,,Year 5,Q815240815096,f,15/05/2011,none,New Artist,,7667499,
+Saul,Middleditch,saulm,limemetal20,Y5 Dales,,Year 5,R815240814028,m,14/04/2011,none,Breakthrough Artist,Slash Rizzla,7667527,30/09/2020 17:09
+Dylan,Morgan,dylanm,oddtin10,Y5 Dales,,Year 5,M815240814093,m,10/05/2011,6.59,Unsigned Act,Charlie McKinnon,7667538,30/09/2020 18:39
+Toby,Morris,tobym,dampboo17,Y5 Dales,,Year 5,X815240814099,m,20/01/2011,none,New Artist,Stranger Furstenfeld,7667529,15/07/2020 11:04
+Florrie,Purvis,florriep,olivebean72,Y5 Dales,,Year 5,P815224615018,f,22/01/2011,10,New Artist,Andrew Domino,7667541,27/09/2020 14:29
+Olivia,Richardson,oliviagr,longcamp74,Y5 Dales,,Year 5,F815240814060,f,10/10/2010,3.75,Headliner,Sass Whitney,7667490,01/10/2020 18:03
+Isabella,Stannard,bellas,badchess83,Y5 Dales,,Year 5,H815240814069,f,30/06/2011,8.57,New Artist,Catherine Bernard,7667537,25/09/2020 20:47
+Samuel,Stannard,samuels,coolseal72,Y5 Dales,,Year 5,H815240814042,m,31/12/2010,2.91,Rock Star,Freddy Rockit,7667560,26/09/2020 16:55
+Emily,Umpleby,emilyu,ultrabell95,Y5 Dales,,Year 5,Y815240814063,f,02/09/2010,3.75,Headliner,Charnai Twizzlesticks,7667517,02/10/2020 08:07
+Emilija,Vaitonyte,emilijav,nicehoney68,Y5 Dales,,Year 5,C810216413070,f,29/01/2011,none,New Artist,Jessy Savage,7667539,18/06/2020 10:27
+Amy,Warriner,amyw,sadindigo87,Y5 Dales,,Year 5,T815240814102,f,03/11/2010,none,New Artist,Florence Marks,7667523,29/09/2020 18:59
+Beau,Wilkinson,beauw,zanymusk97,Y5 Dales,,Year 5,T815240814048,m,11/08/2011,none,New Artist,B. Fleischman,7667534,26/09/2020 09:28
+Grace,Woollard,gracew,mistyfish94,Y5 Dales,,Year 5,G815240814051,f,31/07/2011,5,New Artist,Wilf Lilley,7667540,30/09/2020 23:34
