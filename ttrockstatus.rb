@@ -17,16 +17,16 @@ def roundy_text_box(pdf, text, left:, top:,
                size: 20, overflow: :shrink_to_fit, align: :center
 end
 
-rockers = CSV.parse(File.read('ttrockers.csv'), headers: true)
-stats = CSV.parse(File.read('ttstatus.csv'), headers: true)
+rockers = CSV.parse(File.read('./rockers.csv'), headers: true)
+stats = CSV.parse(File.read('./atmres.csv'), headers: true)
 stats.each do |stat|
   rocker = rockers.find { |r| r['Our ID for this user'] == stat['Id'] }
-  rocker['Baseline'] = stat['Baseline'] # Can I add a field? Yes.
+  rocker['Initial ATM Level'] = stat['Initial ATM Level'].to_s # Can I add a field? Yes.
 end
 
-Prawn::Labels.types = './types.yaml'
+Prawn::Labels.types = 'h:/rept/labels/types.yaml'
 label_type = 'YourPrice08'
-Prawn::Labels.generate("#{__FILE__.split('.')[0]}.pdf", rockers, type: label_type) do |pdf, rocker|
+Prawn::Labels.generate("./labels.pdf", rockers, type: label_type) do |pdf, rocker|
 
   # Background hexagon
   pdf.fill_color '732c0b'
@@ -34,7 +34,7 @@ Prawn::Labels.generate("#{__FILE__.split('.')[0]}.pdf", rockers, type: label_typ
 
   # Avatar image
   avatar_fn = "#{rocker['First name REQUIRED']}_#{rocker['Last name REQUIRED']}.png"
-  avatar_pn = Pathname.new("./ttrockavatars/#{avatar_fn}")
+  avatar_pn = Pathname.new(avatar_fn)
   if avatar_pn.exist?
   pdf.image avatar_pn, at: [45,190], height: 190
   end
@@ -60,22 +60,26 @@ Prawn::Labels.generate("#{__FILE__.split('.')[0]}.pdf", rockers, type: label_typ
                   box_width: 180, box_height: 30, box_colour: 'ff7e2e',
                   text_height: 25, text_colour: 'f4ffa3',
                   opacity: 0.9
-  # Was box
-  roundy_text_box pdf, 'Was',
-                  left: 20, top: 110,
+
+  roundy_text_box pdf, 'First Auto',
+                  left: 30, top: 160,
                   box_width: 50, box_height: 40, box_colour: 'ffffff',
                   text_height: 8, text_colour: '000000',
                   opacity: 0.8
 
-  # Was number (in a box on top)
-  roundy_text_box pdf, rocker['Baseline'],
-                  left: 30, top: 95,
+  roundy_text_box pdf, rocker['Initial ATM Level'],
+                  left: 40, top: 145,
                   box_width: 30, box_height: 20, box_colour: 'ffffff',
                   text_height: 10, text_colour: '000000',
                   opacity: 1
 
-  # Now box
-  roundy_text_box pdf, 'Now',
+  roundy_text_box pdf, 'Last Week',
+                  left: 20, top: 120,
+                  box_width: 70, box_height: 50, box_colour: 'ffffff',
+                  text_height: 8, text_colour: 'ff0000',
+                  opacity: 0.8
+
+  roundy_text_box pdf, 'This Week',
                   left: 190, top: 120,
                   box_width: 70, box_height: 50, box_colour: 'ffffff',
                   text_height: 10, text_colour: '06cf1a',
