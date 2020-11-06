@@ -39,9 +39,9 @@ Prawn::Labels.generate("./labels.pdf", rockers, type: label_type) do |pdf, rocke
   pdf.image avatar_pn, at: [45,190], height: 190
   end
 
-  # Name box
-  name = "#{rocker['First name REQUIRED']} #{rocker['Last name REQUIRED']}"
-  roundy_text_box pdf, name, left: 60, top: 65,
+  # Rock name box
+  roundy_text_box pdf, rocker['Rock Name'].to_s,
+				  left: 60, top: 65,
                   box_width: 160, box_height: 20, box_colour: 'a1c5ff',
                   text_height: 15, text_colour: 'ffffff',
                   opacity: 0.6
@@ -54,8 +54,9 @@ Prawn::Labels.generate("./labels.pdf", rockers, type: label_type) do |pdf, rocke
                     opacity: 1
   end
 
-  # Rock name box
-  roundy_text_box pdf, rocker['Rock Name'].to_s,
+  # Real Name box
+  name = "#{rocker['First name REQUIRED']} #{rocker['Last name REQUIRED']}"
+  roundy_text_box pdf, name,
                   left: 50, top: 40,
                   box_width: 180, box_height: 30, box_colour: 'ff7e2e',
                   text_height: 25, text_colour: 'f4ffa3',
